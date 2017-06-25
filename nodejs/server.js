@@ -15,10 +15,12 @@ server.get('/feed', function( req, res ) {
 
 server.get('/feed/:username', function (req, res) {
     var username = req.params.username;
-    if (feeds.getProfile(username).length == 0 ){
+    var profile = feeds.getProfile(username);
+    if (profile.length == 0 ){
         res.status(404);
+        res.send('User ' + username + ' not found');
     } else {
-        res.json( feeds.getProfile(username) );
+        res.json( profile );
     }
 })
 
