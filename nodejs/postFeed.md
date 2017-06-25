@@ -11,7 +11,6 @@ Add a new post in the feed
   "content": "Good morning Sunday"
 }
 ```
-
 ---
 
 ### Example response
