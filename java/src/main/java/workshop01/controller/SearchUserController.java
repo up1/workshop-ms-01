@@ -1,5 +1,7 @@
 package workshop01.controller;
 
+import java.util.ArrayList;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,7 +13,11 @@ public class SearchUserController {
 	}
 	
 	@GetMapping("/search/Somkiat")
-	public SearchUserResult search() {
-		return new SearchUserResult("somkiat.p", "Somkiat Pui");
+	public ArrayList<SearchUserResult> search() {
+		ArrayList<SearchUserResult> results = new ArrayList<SearchUserResult>();
+		results.add(new SearchUserResult("somkiat.p","Somkiat Pui"));
+		results.add(new SearchUserResult("somkiatx","Somkiat Xxx"));
+		results.add(new SearchUserResult("somkiaty","Somkiat Yyy"));
+		return results;
 	}
 }
