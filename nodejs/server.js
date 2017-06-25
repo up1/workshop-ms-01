@@ -11,6 +11,14 @@ server.get('/about', function (req, res) {
 server.get('/feed', function( req, res ) {
     var id = req.params.id; 
     res.json( feeds.getAllFeeds() ); 
-}); 
+})
+
+server.get('/feed/:userName', function (req, res) {
+    
+})
+
+server.get('/feed/:feedId/like', function (req, res) {
+
+})
 
 server.listen(process.env.PORT || 3000)
