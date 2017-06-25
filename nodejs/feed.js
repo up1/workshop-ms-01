@@ -49,7 +49,7 @@ exports.addFeed = function( username, content ){
     feed.like     = 0;
     feeds.push(feed);
     return feeds;
-}
+};
 
 exports.getProfile = function(username) {
     var profileFeed=[];
