@@ -1,4 +1,5 @@
-const server = require('express')();
+var server = require('express')();
+var bodyParser = require('body-parser')
 var feeds = require('./feed'); 
 
 server.get('/about', function (req, res) {
@@ -9,16 +10,24 @@ server.get('/about', function (req, res) {
 })
 
 server.get('/feed', function( req, res ) {
-    var id = req.params.id; 
     res.json( feeds.getAllFeeds() ); 
 })
 
 server.get('/feed/:username', function (req, res) {
-    res.json( feeds.getProfile(username) );
+    var username = req.params.username;
+    var profile = feeds.getProfile(username);
+    if (profile.length == 0 ){
+        res.status(404);
+        res.send('User ' + username + ' not found');
+    } else {
+        res.json( profile );
+    }
 })
 
-server.get('/feed/:feedId/like', function (req, res) {
-
-})
+server.post( '/feed/:id/like', function( req, res ) {
+    var id = req.params.id; 
+    feeds.addLike( id ); 
+    res.json( feeds.getFeedById(id) ); 
+}); 
 
 server.listen(process.env.PORT || 3000)
