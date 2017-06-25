@@ -42,7 +42,7 @@ exports.getFeedById = function( id ) {
 }; 
 
 exports.addFeed = function( username, content ){
-    var feed;
+    var feed = {};
     feed.feedId   = feeds.length;
     feed.username = username;
     feed.content  = content;
