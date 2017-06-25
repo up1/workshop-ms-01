@@ -41,6 +41,17 @@ exports.getFeedById = function( id ) {
     }
 }; 
 
+exports.getProfile = function(username) {
+    var profileFeed=[];
+    for (var i=0;i<feeds.length;i++){
+        if(feeds[i].username == username){
+            profileFeed.push(feeds[i]);
+        }
+    }
+    return profileFeed;
+};
+
+
 // exports.findById = function (id) {
 //     // for (var i = 0; i < users.length; i++) {
 //     //     if (users[i].id == id) return users[i];
