@@ -27,7 +27,7 @@ exports.getAllFeeds = function() {
 
 exports.getProfile = function(username) {
     var profileFeed=[];
-    for (var i=0;I<feeds.length;i++){
+    for (var i=0;i<feeds.length;i++){
         if(feeds[i].username == username){
             profileFeed.push(feeds[i]);
         }
