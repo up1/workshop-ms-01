@@ -26,7 +26,7 @@ exports.getAllFeeds = function() {
 };
 
 exports.addLike = function(id) {
-    for (var i=0;I<feeds.length;i++){
+    for (var i=0;i<feeds.length;i++){
         if(feeds[i].feedId == id){
             feeds[i].like++;
         }
@@ -34,7 +34,7 @@ exports.addLike = function(id) {
 }; 
 
 exports.getFeedById = function( id ) { 
-    for (var i=0;I<feeds.length;i++){
+    for (var i=0;i<feeds.length;i++){
         if(feeds[i].feedId == id){
             return feeds[i];
         }
