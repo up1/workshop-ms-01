@@ -18,10 +18,6 @@ server.get('/feed/:username', function (req, res) {
     res.json( feeds.getProfile(username) );
 })
 
-server.get('/feed/:feedId/like', function (req, res) {
-
-})
-
 server.post( '/feed/:id/like', function( req, res ) {
     var id = req.params.id; 
     feeds.addLike( id ); 
