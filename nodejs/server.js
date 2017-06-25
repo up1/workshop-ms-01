@@ -14,7 +14,7 @@ server.get('/feed', function( req, res ) {
 })
 
 server.get('/feed/:userName', function (req, res) {
-    
+    res.json( feeds.getProfile(userName) );
 })
 
 server.get('/feed/:feedId/like', function (req, res) {
