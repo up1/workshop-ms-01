@@ -15,7 +15,11 @@ server.get('/feed', function( req, res ) {
 
 server.get('/feed/:username', function (req, res) {
     var username = req.params.username;
-    res.json( feeds.getProfile(username) );
+    if (feeds.getProfile(username).length == 0 ){
+        res.status(404);
+    } else {
+        res.json( feeds.getProfile(username) );
+    }
 })
 
 server.get('/feed/:feedId/like', function (req, res) {
