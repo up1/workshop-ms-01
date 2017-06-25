@@ -36,8 +36,8 @@ server.post( '/feed/:id/like', function( req, res ) {
 server.post( '/feed/', function( req, res) {
     var username = req.body.username;
     var content  = req.body.content;
-    var feeds = feeds.addFeed( username, content );
-    res.json( feeds );
+    var updatedFeeds = feeds.addFeed( username, content );
+    res.json( updatedFeeds );
 })
 
 server.listen(process.env.PORT || 3000)
