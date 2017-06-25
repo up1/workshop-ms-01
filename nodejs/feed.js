@@ -43,7 +43,7 @@ exports.getFeedById = function( id ) {
 
 exports.addFeed = function( username, content ){
     var feed = {};
-    feed.feedId   = feeds.length;
+    feed.feedId   = feeds.length + 1;
     feed.username = username;
     feed.content  = content;
     feed.like     = 0;

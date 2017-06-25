@@ -13,9 +13,9 @@
 * Status: 200
 ```json
 {
-  feedId: 4,
-  username: "Wichanart",
-  content: "Good morning Sunday",
-  like: 0
+  "feedId": 4,
+  "username": "Wichanart",
+  "content": "Good morning Sunday",
+  "like": 0
 }
 ```
