@@ -18,7 +18,7 @@ public class SearchUserController {
 		if ("somkiat".equals(name.toLowerCase())) {
 			return getMockupResult();
 		} else {
-			return null;
+			throw new UserNotFoundException(name);
 		}
 	}
 

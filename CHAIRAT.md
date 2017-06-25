@@ -13,12 +13,11 @@ Search for user with word "somkiat".
 }
 ```
 
-===
+---
 
 ### Example Response
 
 * Status: 200
-* Content-Type: "application/json"
 
 ```json
 [
