@@ -1,9 +1,23 @@
 var feeds = [
     {
-        "feedid": 1,
+        "feedId": 1,
         "username": "chairat",
         "content": "Hello World",
         "like": "1"
+    }, 
+
+    {
+        "feedId": 2,
+        "username": "wichanart",
+        "content": "I am sleepy",
+        "like": "10"
+    }, 
+
+    {
+        "feedId": 3,
+        "username": "isara",
+        "content": "Me too",
+        "like": "100"
     }
 ];
 
