@@ -1,4 +1,5 @@
-const server = require('express')();
+var server = require('express')();
+var bodyParser = require('body-parser')
 var feeds = require('./feed'); 
 
 server.get('/about', function (req, res) {
@@ -9,8 +10,13 @@ server.get('/about', function (req, res) {
 })
 
 server.get('/feed', function( req, res ) {
-    var id = req.params.id; 
     res.json( feeds.getAllFeeds() ); 
+}); 
+
+server.post( '/feed/:id/like', function( req, res ) {
+    var id = req.params.id; 
+    feeds.addLike( id ); 
+    res.json( feeds.getFeedById(id) ); 
 }); 
 
 server.listen(process.env.PORT || 3000)

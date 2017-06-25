@@ -25,6 +25,22 @@ exports.getAllFeeds = function() {
     return feeds;
 };
 
+exports.addLike = function(id) {
+    for (var i=0;I<feeds.length;i++){
+        if(feeds[i].feedId == id){
+            feeds[i].like++;
+        }
+    }
+}; 
+
+exports.getFeedById = function( id ) { 
+    for (var i=0;I<feeds.length;i++){
+        if(feeds[i].feedId == id){
+            return feeds[i];
+        }
+    }
+}; 
+
 // exports.findById = function (id) {
 //     // for (var i = 0; i < users.length; i++) {
 //     //     if (users[i].id == id) return users[i];
