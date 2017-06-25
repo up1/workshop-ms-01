@@ -30,4 +30,10 @@ server.post( '/feed/:id/like', function( req, res ) {
     res.json( feeds.getFeedById(id) ); 
 }); 
 
+server.post( '/feed', function( req, res) {
+    var username = req.body.username;
+    var content  = req.body.content;
+    feeds.addFeed( username, content);
+})
+
 server.listen(process.env.PORT || 3000)

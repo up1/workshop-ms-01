@@ -41,6 +41,15 @@ exports.getFeedById = function( id ) {
     }
 }; 
 
+exports.addFeed = function( username, content ){
+    var feed;
+    feed.feedId   = feeds.length;
+    feed.username = username;
+    feed.content  = content;
+    feed.like     = 0;
+    feeds.push(feed);
+}
+
 exports.getProfile = function(username) {
     var profileFeed=[];
     for (var i=0;i<feeds.length;i++){
