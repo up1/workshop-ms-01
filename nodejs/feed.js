@@ -32,6 +32,7 @@ exports.getProfile = function(username) {
             profileFeed.push(feeds[i]);
         }
     }
+    return profileFeed;
 };
 
 // exports.findById = function (id) {
