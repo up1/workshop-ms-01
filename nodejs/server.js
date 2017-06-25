@@ -38,6 +38,7 @@ server.get('/feed', function( req, res ) {
 })
 
 server.get('/feed/:username', function (req, res) {
+    PrometheusMetrics.feedCounter.inc()
     var username = req.params.username;
     var profile = feeds.getProfile(username);
     if (profile.length == 0 ){
