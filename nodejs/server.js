@@ -1,5 +1,4 @@
 const server = require('express')();
-
 var feeds = require('./feed'); 
 
 server.get('/about', function (req, res) {
@@ -8,5 +7,10 @@ server.get('/about', function (req, res) {
    };
    res.end(JSON.stringify(response));
 })
+
+server.get('/feed', function( req, res ) {
+    var id = req.params.id; 
+    res.json( feeds.getAllFeeds() ); 
+}); 
 
 server.listen(process.env.PORT || 3000)
