@@ -7,7 +7,7 @@
   "content": "Good morning Sunday"
 }
 ```
-===
+---
 
 ### Example response
 * Status: 200
