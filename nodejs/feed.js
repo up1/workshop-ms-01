@@ -48,7 +48,7 @@ exports.addFeed = function( username, content ){
     feed.content  = content;
     feed.like     = 0;
     feeds.push(feed);
-    return feeds;
+    return feed;
 };
 
 exports.getProfile = function(username) {
