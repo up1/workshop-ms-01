@@ -13,7 +13,7 @@ server.get('/feed', function( req, res ) {
     res.json( feeds.getAllFeeds() ); 
 })
 
-server.get('/feed/:userName', function (req, res) {
+server.get('/feed/:username', function (req, res) {
     res.json( feeds.getProfile(userName) );
 })
 
