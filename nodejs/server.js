@@ -14,6 +14,7 @@ server.get('/feed', function( req, res ) {
 })
 
 server.get('/feed/:username', function (req, res) {
+    var username = req.params.username;
     res.json( feeds.getProfile(username) );
 })
 
