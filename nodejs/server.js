@@ -2,6 +2,9 @@ var server = require('express')();
 var bodyParser = require('body-parser')
 var feeds = require('./feed'); 
 
+server.use(bodyParser.urlencoded({ extended: false }));
+server.use(bodyParser.json());
+
 server.get('/about', function (req, res) {
    response = {
       message:"Workshop of microservice"
